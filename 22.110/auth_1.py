@@ -1,5 +1,5 @@
 import hug
-authentication = hug.authentication.basic(hug.authentication.verify("User1", "mypassword"))
+authentication = hug.authentication.basic(hug.authentication.verify("user1", "mypassword"))
 
 
 @hug.get("/public")
