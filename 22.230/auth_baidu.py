@@ -50,7 +50,7 @@ def text2audio(body,response):
         response.status = falcon.HTTP_501
         return {"err_no":501, "err_msg":"input param incorrect.","sn":"abcdefgh","idx":2}
     #必填项的校验
-    if len(body['tex'])>2048 or len(body['cuid'])>60 or body['ctp']!=1 or body['lan']!='zh':
+    if len(body['tex'])>2048 or len(body['cuid'])>60 or body['ctp']!="1" or body['lan']!='zh':
         response.status = falcon.HTTP_501
         return {"err_no": 501, "err_msg": "input param incorrect.", "sn": "abcdefgh", "idx": 2}
     #选填项的校验,我写了一个作为例子，剩下的请读者自己做练习。
